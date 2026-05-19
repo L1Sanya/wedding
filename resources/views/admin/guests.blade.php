@@ -180,7 +180,7 @@
                                     {{ $guest->status === 'will_come' ? '✅ Придёт' : '😔 Не придёт' }}
                                 </span>
                     </td>
-                    <<td>
+                    <td>
                         @if($guest->with_partner && $guest->partner_first_name)
                             {{ $guest->partner_last_name ?? '' }} {{ $guest->partner_first_name }}
                         @else
