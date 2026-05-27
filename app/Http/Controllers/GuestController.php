@@ -192,11 +192,11 @@ class GuestController extends Controller
     public function destroy($id)
     {
         if (!Session::get('admin_logged_in')) {
-            return response()->json(['error' => 'Доступ запрещён'], 403);
+            return redirect('/admin');
         }
 
         Guest::findOrFail($id)->delete();
-        return response()->json(['success' => true]);
+        return redirect('/admin')->with('success', 'Гость удалён');
     }
 
     /**

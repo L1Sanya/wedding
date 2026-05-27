@@ -12,3 +12,4 @@ Route::get('/', function () {
 Route::get('/admin', [GuestController::class, 'admin']);
 Route::post('/admin/login', [GuestController::class, 'adminLogin'])->name('admin.login');
 Route::get('/admin/logout', [GuestController::class, 'adminLogout'])->name('admin.logout');
+Route::delete('/admin/delete/{id}', [GuestController::class, 'destroy'])->name('admin.delete');
